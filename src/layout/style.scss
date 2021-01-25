@@ -1,0 +1,101 @@
+@import "../styles/_mixins";
+@import "../styles/_variables";
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template:
+    "aside header" 60px
+    "aside main" auto / minmax(213px, 256px) auto;
+
+  &__aside {
+    grid-area: aside;
+    background-color: #ffffff;
+    padding-top: 85px;
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+
+    &__profile {
+      padding: 0 26px;
+      display: grid;
+      grid-template-columns: 47px 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 8px 16px;
+      grid-template-areas:
+        "pic name"
+        "pic email";
+
+      &__pic {
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        grid-area: pic;
+      }
+
+      &__name {
+        grid-area: name;
+        margin: 0;
+        @include font(14, 500, $black);
+      }
+
+      &__email {
+        grid-area: email;
+        text-decoration: none;
+        @include font(11, 500, $gray);
+      }
+    }
+
+    &__nav {
+      &__list {
+        list-style: none;
+        padding: 0;
+
+        &__item {
+          padding: 12px 26px;
+          @include font(13, 500, $dark);
+          stroke: $light;
+          fill: $light;
+          cursor: pointer;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          transition: all 0.3s;
+
+          &:hover {
+            stroke: $hover;
+            fill: $hover;
+            color: $hover;
+          }
+
+          svg {
+            padding-right: 16px;
+          }
+        }
+        &__line {
+          width: 100%;
+          height: 1px;
+          margin: 12px 0;
+          background-color: $divider;
+        }
+      }
+    }
+  }
+
+  &__header {
+    grid-area: header;
+    padding: 0 27px;
+    background-color: $bg;
+    border-bottom: 1px solid $divider;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-left: 16px;
+    }
+  }
+}

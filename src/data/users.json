@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Aykhan Huseyn",
+        "department_id": 1,
+        "department_name": "Software development",
+        "job_id": 2,
+        "job_title": "Frontend developer"
+    },
+    {
+        "id": 2,
+        "name": "Orkhan Huseyn",
+        "department_id": 1,
+        "department_name": "Software development",
+        "job_id": 3,
+        "job_title": "Backend developer"
+    },
+    {
+        "id": 3,
+        "name": "John Doe",
+        "department_id": 1,
+        "department_name": "Software development",
+        "job_id": 1,
+        "job_title": "Head of department"
+    },
+    {
+        "id": 4,
+        "name": "Peter Parker",
+        "department_id": 1,
+        "department_name": "Software development",
+        "job_id": 3,
+        "job_title": "Backend developer - intern"
+    },
+    {
+        "id": 5,
+        "name": "Jack Sparrow",
+        "department_id": 1,
+        "department_name": "Software development",
+        "job_id": 2,
+        "job_title": "Frontend developer - intern"
+    }
+]

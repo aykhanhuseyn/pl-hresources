@@ -1,0 +1,29 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
+.card-view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  min-width: 816px;
+  padding-right: 20px;
+
+  .card {
+    &__arrow[data-arrow="left"] {
+      transform: translateX(-130px) rotateY(180deg);
+    }
+  }
+  .card:nth-child(2) {
+    top: 95px;
+    right: 272px;
+    z-index: 9;
+  }
+  .card:nth-child(3) {
+    top: -127px;
+    right: -272px;
+    z-index: 9;
+  }
+}

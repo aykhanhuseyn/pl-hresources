@@ -1,0 +1,36 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
+.boxes {
+  display: inline-block;
+  margin: 0 8px;
+
+  &__badge {
+    width: 31px;
+    height: 18px;
+    border-radius: 2px;
+    padding: 3px;
+    line-height: 14px;
+
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
+
+    &--purple {
+      @include font(8, 700, $structure-purple);
+      background-color: $structure-purple-2;
+    }
+    &--blue {
+      @include font(8, 700, $structure-blue);
+      background-color: $structure-blue-2;
+    }
+    &--green {
+      @include font(8, 700, $structure-green);
+      background-color: $structure-green-2;
+    }
+    &--yellow {
+      @include font(8, 700, $structure-yellow);
+      background-color: $structure-yellow-2;
+    }
+  }
+}
